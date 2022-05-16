@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tourshop_app/ui/page/us_home_screen.dart';
+import 'package:tourshop_app/ui/page/us_navigator.dart';
 import 'package:tourshop_app/ui/page/us_splash_screen.dart';
 
 void main() {
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: US_Splash_Screen(),
+      home: Navigator_Screen(),
     );
   }
 }
