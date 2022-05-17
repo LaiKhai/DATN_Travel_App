@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:tourshop_app/ui/common/constant/color.dart';
 
 class Item_search extends StatefulWidget {
@@ -75,11 +76,11 @@ class _Item_searchState extends State<Item_search> {
                                   topRight: Radius.circular(0),
                                 ),
                               ),
-                              child: const Center(
+                              child: Center(
                                 child: Text(
                                   '3.589.000đ',
                                   textAlign: TextAlign.center,
-                                  style: TextStyle(
+                                  style: GoogleFonts.quicksand(
                                     fontWeight: FontWeight.bold,
                                     color: Colors.white,
                                     fontSize: 18,
@@ -98,18 +99,18 @@ class _Item_searchState extends State<Item_search> {
                                 EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
-                              children: const [
-                                Icon(
+                              children: [
+                                const Icon(
                                   Icons.schedule_outlined,
                                   color: Colors.white,
                                   size: 24,
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       5, 0, 0, 0),
                                   child: Text(
                                     '3 ngày/ 2 đêm',
-                                    style: TextStyle(
+                                    style: GoogleFonts.quicksand(
                                       color: Colors.white,
                                       fontWeight: FontWeight.bold,
                                       fontSize: 12,
@@ -126,25 +127,25 @@ class _Item_searchState extends State<Item_search> {
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
-                              children: const [
-                                Icon(
+                              children: [
+                                const Icon(
                                   Icons.place_outlined,
                                   color: Colors.white,
                                   size: 24,
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       5, 0, 5, 0),
                                   child: Text(
                                     'TP. Hồ Chí Minh',
-                                    style: TextStyle(
+                                    style: GoogleFonts.quicksand(
                                       fontWeight: FontWeight.bold,
                                       color: Colors.white,
                                       fontSize: 12,
                                     ),
                                   ),
                                 ),
-                                Padding(
+                                const Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       10, 0, 0, 0),
                                   child: Icon(
@@ -158,7 +159,7 @@ class _Item_searchState extends State<Item_search> {
                                       5, 0, 5, 0),
                                   child: Text(
                                     '12/05/2020',
-                                    style: TextStyle(
+                                    style: GoogleFonts.quicksand(
                                       fontWeight: FontWeight.bold,
                                       color: Colors.white,
                                       fontSize: 12,
@@ -178,10 +179,10 @@ class _Item_searchState extends State<Item_search> {
                 padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 8),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
-                  children: const [
+                  children: [
                     Text(
                       'Du Lịch phú quốc',
-                      style: TextStyle(
+                      style: GoogleFonts.quicksand(
                         color: Colors.black,
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -193,16 +194,16 @@ class _Item_searchState extends State<Item_search> {
               Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
+                children: [
                   Text(
                     'Phương tiện:',
-                    style: TextStyle(
+                    style: GoogleFonts.quicksand(
                       color: Color(0xFF57636C),
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  Padding(
+                  const Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(5, 0, 5, 0),
                     child: Icon(
                       Icons.place_outlined,
@@ -210,12 +211,12 @@ class _Item_searchState extends State<Item_search> {
                       size: 24,
                     ),
                   ),
-                  Icon(
+                  const Icon(
                     Icons.airport_shuttle_sharp,
                     color: Colors.black,
                     size: 24,
                   ),
-                  Padding(
+                  const Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
                     child: Icon(
                       Icons.person_rounded,
@@ -226,7 +227,7 @@ class _Item_searchState extends State<Item_search> {
                   Expanded(
                     child: Text(
                       'Số người: 12',
-                      style: TextStyle(
+                      style: GoogleFonts.quicksand(
                         color: Color(0xFF57636C),
                         fontSize: 14,
                         fontWeight: FontWeight.bold,
@@ -245,11 +246,11 @@ class _Item_searchState extends State<Item_search> {
                       color: US_APP_COLOR,
                       borderRadius: BorderRadius.circular(35),
                     ),
-                    child: const Center(
+                    child: Center(
                       child: Text(
                         'Hội nhóm',
                         textAlign: TextAlign.center,
-                        style: TextStyle(
+                        style: GoogleFonts.quicksand(
                             fontWeight: FontWeight.bold, color: Colors.white),
                       ),
                     ),

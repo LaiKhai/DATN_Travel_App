@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Cart_button extends StatefulWidget {
   const Cart_button({Key? key}) : super(key: key);
@@ -13,11 +14,11 @@ class _Cart_buttonState extends State<Cart_button> {
     return InkWell(
       onTap: () {},
       child: Container(
-        margin: EdgeInsets.all(10),
+        margin: const EdgeInsets.all(10),
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
           color: Colors.white,
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               blurRadius: 3,
               color: Color(0x411D2429),
@@ -53,7 +54,7 @@ class _Cart_buttonState extends State<Cart_button> {
                     children: [
                       Text(
                         'Title',
-                        style: TextStyle(
+                        style: GoogleFonts.quicksand(
                           color: Color(0xFF090F13),
                           fontSize: 20,
                           fontWeight: FontWeight.w500,
@@ -62,7 +63,7 @@ class _Cart_buttonState extends State<Cart_button> {
                       Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: const [
+                        children: [
                           Icon(
                             Icons.local_airport_sharp,
                             color: Colors.black,
@@ -70,17 +71,17 @@ class _Cart_buttonState extends State<Cart_button> {
                           ),
                           Text(
                             '20/11/2000',
-                            style: TextStyle(
+                            style: GoogleFonts.quicksand(
                                 fontSize: 13, fontWeight: FontWeight.bold),
                           ),
-                          Icon(
+                          const Icon(
                             Icons.home,
                             color: Colors.black,
                             size: 24,
                           ),
                           Text(
                             '22/11/2002',
-                            style: TextStyle(
+                            style: GoogleFonts.quicksand(
                                 fontSize: 13, fontWeight: FontWeight.bold),
                           ),
                         ],
@@ -99,7 +100,7 @@ class _Cart_buttonState extends State<Cart_button> {
                               AlignmentDirectional(0.050000000000000044, 0),
                           child: Text(
                             'Hội nhóm',
-                            style: TextStyle(
+                            style: GoogleFonts.quicksand(
                                 fontSize: 13,
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold),
@@ -109,7 +110,7 @@ class _Cart_buttonState extends State<Cart_button> {
                       Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
-                          CircleAvatar(
+                          const CircleAvatar(
                             backgroundImage: NetworkImage(
                                 'https://picsum.photos/seed/437/600'),
                             radius: 15,
@@ -118,7 +119,7 @@ class _Cart_buttonState extends State<Cart_button> {
                             padding: EdgeInsets.only(right: 10, left: 10),
                             child: Text(
                               'Tên công ty',
-                              style: TextStyle(
+                              style: GoogleFonts.quicksand(
                                   fontSize: 13, fontWeight: FontWeight.bold),
                             ),
                           ),

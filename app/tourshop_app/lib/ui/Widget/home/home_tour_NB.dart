@@ -2,6 +2,7 @@
 
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:tourshop_app/ui/common/constant/string.dart';
 
 // ignore: must_be_immutable
@@ -67,8 +68,7 @@ class Text_tour_NB extends StatelessWidget {
             Text(
               name_tour,
               textAlign: TextAlign.start,
-              style: TextStyle(
-                fontFamily: font,
+              style: GoogleFonts.quicksand(
                 color: Colors.white,
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
@@ -79,11 +79,10 @@ class Text_tour_NB extends StatelessWidget {
                 padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 8),
                 child: AutoSizeText(
                   mo_ta,
-                  style: TextStyle(
-                    color: const Color.fromARGB(206, 255, 255, 255),
+                  style: GoogleFonts.quicksand(
+                    color: Color.fromARGB(229, 255, 255, 255),
                     fontSize: 14,
-                    fontFamily: font,
-                    fontWeight: FontWeight.normal,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
@@ -110,10 +109,9 @@ class Text_tour_NB extends StatelessWidget {
                         padding: EdgeInsets.only(left: 10),
                         child: Text(
                           name_Congty,
-                          style: TextStyle(
+                          style: GoogleFonts.quicksand(
                             color: Color(0xB3FFFFFF),
                             fontSize: 14,
-                            fontFamily: font,
                             fontWeight: FontWeight.bold,
                           ),
                         ),

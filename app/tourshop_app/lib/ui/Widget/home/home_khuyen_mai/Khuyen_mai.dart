@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:tourshop_app/ui/common/constant/dimen.dart';
 import 'package:tourshop_app/ui/common/constant/string.dart';
-
 
 class KM_Text extends StatelessWidget {
   String Text_KM;
@@ -58,12 +58,12 @@ class KM_Text extends StatelessWidget {
                 constraints:
                     BoxConstraints(maxWidth: getWidthSize(context) * 0.45),
                 child: Text(Name_Congty_KM,
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontFamily: font,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 15,
-                        overflow: TextOverflow.ellipsis)),
+                    style: GoogleFonts.quicksand(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 15,
+                    ),
+                    overflow: TextOverflow.ellipsis),
               ),
               // ignore: avoid_unnecessary_containers
               Container(
@@ -75,15 +75,13 @@ class KM_Text extends StatelessWidget {
                     ),
                     Container(
                       padding: const EdgeInsets.only(left: 10),
-                      child: Text(
-                        Name_Congty_KM,
-                        style: TextStyle(
+                      child: Text(Name_Congty_KM,
+                          style: GoogleFonts.quicksand(
                             fontWeight: FontWeight.bold,
                             fontSize: 15,
                             color: Colors.white,
-                            fontFamily: font,
-                            overflow: TextOverflow.ellipsis),
-                      ),
+                          ),
+                          overflow: TextOverflow.ellipsis),
                     )
                   ],
                 ),
@@ -94,8 +92,7 @@ class KM_Text extends StatelessWidget {
               Container(
                 child: Text(
                   Money_KM,
-                  style: TextStyle(
-                      fontFamily: font,
+                  style: GoogleFonts.quicksand(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
                       fontSize: 25),

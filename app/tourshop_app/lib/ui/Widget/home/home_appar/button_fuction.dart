@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:tourshop_app/ui/common/constant/color.dart';
 import 'package:tourshop_app/ui/common/constant/string.dart';
 
@@ -33,8 +34,11 @@ class Button_function extends StatelessWidget {
             ),
             Text(
               text,
-              style: TextStyle(
-                  color: Colors.white, fontSize: 12, fontFamily: font),
+              style: GoogleFonts.quicksand(
+                fontSize: 12,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
             ),
           ],
         ),

@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tourshop_app/ui/Widget/home/home_appar/Button_icon_appar.dart';
 import 'package:tourshop_app/ui/Widget/home/home_appar/button_fuction.dart';
 import 'package:tourshop_app/ui/common/constant/dimen.dart';
+import 'package:tourshop_app/ui/page/us_navigator.dart';
 
 import '../../common/navigator_index/index.dart';
 
@@ -58,14 +59,33 @@ class _Home_apparState extends State<Home_appar> {
                   //icon thông báo
                   // ignore: avoid_unnecessary_containers
                   Icon_appar(
-                      icons: Icons.add_alert_outlined, colors: Colors.white),
+                    icons: Icons.add_alert_outlined,
+                    colors: Colors.white,
+                    onpressed: () {},
+                  ),
                   //icon lịch sử
                   // ignore: avoid_unnecessary_containers
-                  Icon_appar(icons: Icons.hiking_sharp, colors: Colors.white),
+                  Icon_appar(
+                      icons: Icons.hiking_sharp,
+                      colors: Colors.white,
+                      onpressed: () {
+                        icons = 1;
+                        Navigator.pushAndRemoveUntil(
+                          context,
+                          MaterialPageRoute(
+                            builder: (BuildContext context) =>
+                                Navigator_Screen(),
+                          ),
+                          (route) => false,
+                        );
+                      }),
 
                   //icon hồ sơ
                   // ignore: avoid_unnecessary_containers
-                  Icon_appar(icons: Icons.person_outlined, colors: Colors.white)
+                  Icon_appar(
+                      icons: Icons.person_outlined,
+                      colors: Colors.white,
+                      onpressed: () {})
                 ],
               ),
             ],
@@ -98,6 +118,15 @@ class _Home_apparState extends State<Home_appar> {
                     ontap: () {
                       print('object');
                       setState(() {
+                        Navigator.pushAndRemoveUntil(
+                          context,
+                          MaterialPageRoute(
+                            builder: (BuildContext context) =>
+                                Navigator_Screen(),
+                          ),
+                          (route) => false,
+                        );
+
                         icons = 2;
                       });
                       print(icons);

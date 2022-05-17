@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fab_circular_menu/fab_circular_menu.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:tourshop_app/ui/common/constant/color.dart';
 import 'package:tourshop_app/ui/page/ui_search_screen.dart';
 import 'package:tourshop_app/ui/page/us_history_screen.dart';
@@ -56,13 +57,12 @@ class _Navigator_ScreenState extends State<Navigator_Screen> {
             // These properties take precedence over fabColor
             fabColor: US_APP_COLOR,
             fabOpenIcon: Ison(icons, Colors.white),
-            fabCloseIcon: const Text(
-              'X',
-              style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                  fontSize: 20),
-            ),
+            fabCloseIcon: Text('X',
+                style: GoogleFonts.quicksand(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                    fontSize: 20)),
+
             fabMargin: const EdgeInsets.all(16.0),
             animationDuration: const Duration(milliseconds: 800),
             animationCurve: Curves.easeInOutCirc,

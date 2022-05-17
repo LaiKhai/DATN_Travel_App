@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'package:tourshop_app/ui/Widget/home/home_appar.dart';
 import 'package:tourshop_app/ui/Widget/home/home_khuyen_mai/Khuyen_mai.dart';
@@ -126,12 +127,13 @@ class _Home_screenState extends State<Home_screen> {
                 children: [
                   // ignore: avoid_unnecessary_containers
                   Container(
-                    child: Text('Tour nổi bật',
-                        style: TextStyle(
-                            fontFamily: font,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black,
-                            fontSize: 30)),
+                    child: Text(
+                      'Tour nổi bật',
+                      style: GoogleFonts.quicksand(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                          fontSize: 30),
+                    ),
                   ),
                   // ignore: avoid_unnecessary_containers
                   Container(
@@ -161,15 +163,15 @@ class _Home_screenState extends State<Home_screen> {
                   ),
                   child: Stack(
                     children: [
+                      Img_tour_NB(),
                       Container(
                         width: double.infinity,
                         height: 170,
                         decoration: BoxDecoration(
-                          color: Color.fromARGB(80, 16, 18, 19),
+                          color: Color.fromARGB(104, 42, 37, 37),
                           borderRadius: BorderRadius.circular(16),
                         ),
                       ),
-                      Img_tour_NB(),
                       Text_tour_NB()
                     ],
                   ),
@@ -182,12 +184,13 @@ class _Home_screenState extends State<Home_screen> {
             delegate: SliverChildListDelegate([
               Container(
                 padding: const EdgeInsets.only(top: 10, left: 30, right: 30),
-                child: Text('Tour du lịch bạn muốn ?',
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontFamily: font,
-                        color: Colors.black,
-                        fontSize: 25)),
+                child: Text(
+                  'Tour du lịch bạn muốn ?',
+                  style: GoogleFonts.quicksand(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                      fontSize: 25),
+                ),
               )
             ]),
           ),
@@ -239,8 +242,7 @@ class _Home_screenState extends State<Home_screen> {
             Container(
               padding: EdgeInsets.only(left: 30, right: 30),
               child: Text('Địa điểm nổi bật',
-                  style: TextStyle(
-                      fontFamily: font,
+                  style: GoogleFonts.quicksand(
                       fontWeight: FontWeight.bold,
                       color: Colors.black,
                       fontSize: 25)),
@@ -275,12 +277,13 @@ class _Home_screenState extends State<Home_screen> {
                     children: [
                       Container(
                         margin: const EdgeInsets.only(left: 20, bottom: 10),
-                        child: Text('Địa điểm nổi bật',
-                            style: TextStyle(
-                                fontFamily: font,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                                fontSize: 20)),
+                        child: Text(
+                          'Địa điểm nổi bật',
+                          style: GoogleFonts.quicksand(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                              fontSize: 20),
+                        ),
                       )
                     ],
                   )),

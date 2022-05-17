@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../../common/constant/color.dart';
 
@@ -67,19 +68,19 @@ class _Date_time_butState extends State<Date_time_but> {
                 widget.dateTime == DateTime(1000)
                     ? Text(
                         widget.texts,
-                        style: const TextStyle(
-                          color: Colors.white,
+                        style: GoogleFonts.quicksand(
+                                  color: Colors.white,
                           fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        ),
+                          fontWeight: FontWeight.bold
+                            ),
                       )
                     : Text(
                         ' ${widget.dateTime.day.toString()}/${widget.dateTime.month}/${widget.dateTime.year}',
-                        style: const TextStyle(
-                          color: Colors.white,
+                        style:  GoogleFonts.quicksand(
+                                  color: Colors.white,
                           fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        ),
+                          fontWeight: FontWeight.bold
+                            ),
                       ),
                 const Icon(
                   Icons.date_range_outlined,

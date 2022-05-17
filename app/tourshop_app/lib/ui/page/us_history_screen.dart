@@ -44,29 +44,30 @@ class _History_ScreenState extends State<History_Screen> {
               delegate: SliverChildListDelegate([
             Container(
               color: US_APP_COLOR,
-              padding: EdgeInsets.all(15),
+              padding: const EdgeInsets.all(15),
               child: TextFormField(
                 controller: textController,
                 onChanged: (_) => EasyDebounce.debounce(
                   'textController',
-                  Duration(milliseconds: 2000),
+                  const Duration(milliseconds: 2000),
                   () => setState(() {}),
                 ),
                 autofocus: true,
                 obscureText: false,
                 decoration: InputDecoration(
-                  hintStyle: const TextStyle(
-                      color: Colors.white, fontWeight: FontWeight.bold),
+                  hintStyle:  GoogleFonts.quicksand(
+                                 color: Colors.white, fontWeight: FontWeight.bold),
+                            
                   hintText: 'Tìm kiếm',
                   enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
+                    borderSide: const BorderSide(
                       color: Colors.white,
                       width: 1,
                     ),
                     borderRadius: BorderRadius.circular(25),
                   ),
                   focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
+                    borderSide: const BorderSide(
                       color: Color.fromARGB(35, 37, 38, 54),
                       width: 1,
                     ),
@@ -79,11 +80,11 @@ class _History_ScreenState extends State<History_Screen> {
                     color: Colors.white,
                   ),
                 ),
-                style: const TextStyle(
-                  fontSize: 15,
+                style:  GoogleFonts.quicksand(
+                                  fontSize: 15,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
-                ),
+                            ),
               ),
             )
             // Generated code for this Row Widget...
@@ -105,14 +106,15 @@ class _History_ScreenState extends State<History_Screen> {
                 ],
               ),
             ),
-            const Padding(
+             Padding(
               padding: EdgeInsets.only(left: 16, right: 16),
               child: Text(
                 'Các tour đã đi',
-                style: TextStyle(
-                    fontSize: 20,
+                style:  GoogleFonts.quicksand(
+                                  fontSize: 20,
                     fontWeight: FontWeight.bold,
-                    color: Colors.black),
+                    color: Colors.black
+                            ),
               ),
             )
           ])),

@@ -1,5 +1,6 @@
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:tourshop_app/ui/Widget/Search/Item_search.dart';
 
 import '../common/constant/color.dart';
@@ -21,10 +22,11 @@ class _Search_ScreenState extends State<Search_Screen> {
         toolbarHeight: 90,
         elevation: 0,
         backgroundColor: US_APP_COLOR,
-        title: const Text(
+        title:  Text(
           'Tìm kiếm tour',
-          style: TextStyle(
-              color: Colors.white, fontWeight: FontWeight.bold, fontSize: 30),
+          style: GoogleFonts.quicksand(
+                                color: Colors.white, fontWeight: FontWeight.bold, fontSize: 30
+                            ),
         ),
         centerTitle: true,
       ),
@@ -48,19 +50,20 @@ class _Search_ScreenState extends State<Search_Screen> {
                     autofocus: true,
                     obscureText: false,
                     decoration: InputDecoration(
-                      hintStyle: const TextStyle(
-                          color: Color.fromARGB(255, 114, 112, 112),
-                          fontWeight: FontWeight.bold),
+                      hintStyle: GoogleFonts.quicksand(
+                                 color: Color.fromARGB(255, 114, 112, 112),
+                          fontWeight: FontWeight.bold
+                            ),
                       hintText: 'Tìm kiếm',
                       enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Colors.white,
                           width: 1,
                         ),
                         borderRadius: BorderRadius.circular(25),
                       ),
                       focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Color.fromARGB(35, 37, 38, 54),
                           width: 1,
                         ),
@@ -73,11 +76,11 @@ class _Search_ScreenState extends State<Search_Screen> {
                         color: Color.fromARGB(255, 114, 112, 112),
                       ),
                     ),
-                    style: const TextStyle(
-                      fontSize: 15,
+                    style: GoogleFonts.quicksand(
+                                   fontSize: 15,
                       fontWeight: FontWeight.bold,
                       color: Color.fromARGB(255, 114, 112, 112),
-                    ),
+                            ),
                   ),
                 ),
                 InkWell(
@@ -92,7 +95,7 @@ class _Search_ScreenState extends State<Search_Screen> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       mainAxisSize: MainAxisSize.max,
-                      children: [
+                      children: const [
                         Icon(
                           Icons.file_copy,
                           color: Colors.white,
@@ -106,12 +109,13 @@ class _Search_ScreenState extends State<Search_Screen> {
             ),
             Container(
                 padding: EdgeInsets.only(left: 20, right: 20),
-                child: const Text(
+                child:  Text(
                   'Danh sách tour du lịch',
-                  style: TextStyle(
-                      color: Color.fromARGB(255, 78, 77, 77),
+                  style: GoogleFonts.quicksand(
+                                 color: const Color.fromARGB(255, 78, 77, 77),
                       fontWeight: FontWeight.bold,
-                      fontSize: 20),
+                      fontSize: 20
+                            ),
                 ))
           ])),
           SliverList(delegate:
