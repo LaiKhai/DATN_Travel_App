@@ -5,7 +5,7 @@
     android:versionName="1.0.0" >
 
     <uses-sdk
-        android:minSdkVersion="21"
+        android:minSdkVersion="16"
         android:targetSdkVersion="31" />
     <!--
          Flutter needs it to communicate with the running application
@@ -51,6 +51,13 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false" />
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false" />
     </application>
 
 </manifest>

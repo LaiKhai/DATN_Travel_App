@@ -8,6 +8,10 @@
         "source": "D:\\HocTap\\DATN_Travel_App\\app\\tourshop_app\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
+        "merged": "D:\\HocTap\\DATN_Travel_App\\app\\tourshop_app\\build\\app\\intermediates\\res\\merged\\debug\\drawable_launch_background.xml.flat",
+        "source": "D:\\HocTap\\DATN_Travel_App\\app\\tourshop_app\\android\\app\\src\\main\\res\\drawable\\launch_background.xml"
+    },
+    {
         "merged": "D:\\HocTap\\DATN_Travel_App\\app\\tourshop_app\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
         "source": "D:\\HocTap\\DATN_Travel_App\\app\\tourshop_app\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
