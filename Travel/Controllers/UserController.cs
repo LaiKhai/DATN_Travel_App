@@ -16,6 +16,7 @@ using Travel.Models;
 namespace Travel.Controllers
 {
     [Authorize]
+    [Authorize(Roles = "Admin")]
     [Route("api/[controller]")]
     [ApiController]
     public class UserController : Controller

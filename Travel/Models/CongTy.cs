@@ -9,8 +9,12 @@ namespace Travel.Models
     public class CongTy
     {
         public int Id { get; set; }
+        public string Tencongty { get; set; }
         [EmailAddress(ErrorMessage = "{0} không hợp lệ")]
         public string Email { get; set; }
+        [DataType(DataType.Password)]
+        [StringLength(255, MinimumLength = 6, ErrorMessage = "{0} từ 6-20 kí tự")]
+        public string MatKhau { get; set; }
         [RegularExpression("0\\d{9}", ErrorMessage = "SĐT không hợp lệ")]
         public string Sdt { get; set; }
         public string KhuVuc { get; set; }

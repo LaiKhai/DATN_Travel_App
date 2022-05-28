@@ -17,6 +17,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Travel.Data;
 using Travel.Helpers;
+using Travel.Middleware;
 using Travel.Models.custom;
 
 namespace Travel
@@ -33,6 +34,11 @@ namespace Travel
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSession(ses =>
+            {
+                ses.IdleTimeout = new TimeSpan(7, 0, 0, 0);
+            });
+            services.AddControllersWithViews();
 
             services.AddControllers().AddJsonOptions(options =>
             {
@@ -84,7 +90,8 @@ namespace Travel
 
             app.UseAuthentication();
             app.UseAuthorization();
- 
+            app.UseCheckAdminMiddleware();
+            app.UseSession();
 
 
             app.UseEndpoints(endpoints =>

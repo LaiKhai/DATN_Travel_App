@@ -8718,11 +8718,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\API\\Travel\\Travel\\Travel.csproj",
+      "projectUniqueName": "D:\\Travel_Git\\Travel\\Travel.csproj",
       "projectName": "Travel",
-      "projectPath": "D:\\API\\Travel\\Travel\\Travel.csproj",
+      "projectPath": "D:\\Travel_Git\\Travel\\Travel.csproj",
       "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-      "outputPath": "D:\\API\\Travel\\Travel\\obj\\",
+      "outputPath": "D:\\Travel_Git\\Travel\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",

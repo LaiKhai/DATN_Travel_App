@@ -25,8 +25,6 @@ namespace Travel.Models
         public DateTime NgaySinh { get; set; }
         public string HoTen { get; set; }
 
-        private DateTime? ngaytao = null;
-        private DateTime? ngaysua = null;
         public DateTime NgayTao { get; set; } = DateTime.Now;
 
         public DateTime NgaySua { get; set; } = DateTime.Now;
@@ -34,6 +32,8 @@ namespace Travel.Models
         public DateTime? NgayXoa { get; set; }
 
         public int TrangThai { get; set; } = 1;
+        [DefaultValue(true)]
+        public bool isAdmin { get; set; }
 
         public List<HoaDon> HoaDons { get; set; }
 
