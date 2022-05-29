@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tourshop_app/ui/common/constant/color.dart';
 import 'package:tourshop_app/ui/common/constant/dimen.dart';
+import 'package:tourshop_app/ui/page/us_navigator.dart';
 
 class US_TextField_Login extends StatefulWidget {
   const US_TextField_Login({Key? key}) : super(key: key);
@@ -88,7 +89,13 @@ class _US_TextField_LoginState extends State<US_TextField_Login> {
                     height: 55,
                     width: 142,
                     child: OutlinedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Navigator_Screen()),
+                        );
+                      },
                       child: Text(
                         "Đăng ký",
                         style: TextStyle(color: US_APP_WHITE),

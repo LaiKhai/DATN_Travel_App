@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\HocTap\\DATN_Travel_App\\app\\tourshop_app\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-be\\values-be.xml",
+            "outputFile": "D:\\doan\\DATN_Travel_App\\app\\tourshop_app\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-be\\values-be.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-2\\files-2.1\\bf57ee6ef03cef43525091c12acf6534\\core-1.6.0\\res\\values-be\\values-be.xml",
+                    "source": "C:\\Users\\dauxa\\.gradle\\caches\\transforms-2\\files-2.1\\bf57ee6ef03cef43525091c12acf6534\\core-1.6.0\\res\\values-be\\values-be.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

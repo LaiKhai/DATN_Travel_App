@@ -1,4 +1,4 @@
-#Mon May 23 22:26:39 ICT 2022
-base.0=D\:\\HocTap\\DATN_Travel_App\\app\\tourshop_app\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+#Sun May 29 19:22:11 ICT 2022
+base.0=D\:\\doan\\DATN_Travel_App\\app\\tourshop_app\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex
