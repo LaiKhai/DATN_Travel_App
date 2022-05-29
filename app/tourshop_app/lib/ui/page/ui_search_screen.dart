@@ -22,11 +22,10 @@ class _Search_ScreenState extends State<Search_Screen> {
         toolbarHeight: 90,
         elevation: 0,
         backgroundColor: US_APP_COLOR,
-        title:  Text(
+        title: Text(
           'Tìm kiếm tour',
           style: GoogleFonts.quicksand(
-                                color: Colors.white, fontWeight: FontWeight.bold, fontSize: 30
-                            ),
+              color: Colors.white, fontWeight: FontWeight.bold, fontSize: 30),
         ),
         centerTitle: true,
       ),
@@ -50,10 +49,7 @@ class _Search_ScreenState extends State<Search_Screen> {
                     autofocus: true,
                     obscureText: false,
                     decoration: InputDecoration(
-                      hintStyle: GoogleFonts.quicksand(
-                                 color: Color.fromARGB(255, 114, 112, 112),
-                          fontWeight: FontWeight.bold
-                            ),
+                      hintStyle: ggTextStyle(30, FontWeight.bold, US_APP_WHITE),
                       hintText: 'Tìm kiếm',
                       enabledBorder: OutlineInputBorder(
                         borderSide: const BorderSide(
@@ -77,10 +73,10 @@ class _Search_ScreenState extends State<Search_Screen> {
                       ),
                     ),
                     style: GoogleFonts.quicksand(
-                                   fontSize: 15,
+                      fontSize: 15,
                       fontWeight: FontWeight.bold,
                       color: Color.fromARGB(255, 114, 112, 112),
-                            ),
+                    ),
                   ),
                 ),
                 InkWell(
@@ -109,13 +105,12 @@ class _Search_ScreenState extends State<Search_Screen> {
             ),
             Container(
                 padding: EdgeInsets.only(left: 20, right: 20),
-                child:  Text(
+                child: Text(
                   'Danh sách tour du lịch',
                   style: GoogleFonts.quicksand(
-                                 color: const Color.fromARGB(255, 78, 77, 77),
+                      color: const Color.fromARGB(255, 78, 77, 77),
                       fontWeight: FontWeight.bold,
-                      fontSize: 20
-                            ),
+                      fontSize: 20),
                 ))
           ])),
           SliverList(delegate:

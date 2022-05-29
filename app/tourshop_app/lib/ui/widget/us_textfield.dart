@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tourshop_app/ui/common/constant/color.dart';
 import 'package:tourshop_app/ui/common/constant/dimen.dart';
+import 'package:tourshop_app/ui/common/constant/string.dart';
+import 'package:tourshop_app/ui/page/us_register_screen.dart';
 
 class US_TextField_Login extends StatefulWidget {
   const US_TextField_Login({Key? key}) : super(key: key);
@@ -46,7 +48,7 @@ class _US_TextField_LoginState extends State<US_TextField_Login> {
                       color: US_APP_WHITE,
                     ),
                     labelText: 'Email',
-                    labelStyle: TextStyle(fontSize: 16, color: Colors.white),
+                    labelStyle: ggTextStyle(16, FontWeight.bold, US_APP_WHITE),
                   ),
                 ),
               ),
@@ -78,7 +80,7 @@ class _US_TextField_LoginState extends State<US_TextField_Login> {
                       ),
                     ),
                     labelText: 'Mật Khẩu',
-                    labelStyle: TextStyle(fontSize: 16, color: US_APP_WHITE),
+                    labelStyle: ggTextStyle(16, FontWeight.bold, US_APP_WHITE),
                   ),
                 ),
               ),
@@ -88,7 +90,12 @@ class _US_TextField_LoginState extends State<US_TextField_Login> {
                     height: 55,
                     width: 142,
                     child: OutlinedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: ((context) => US_Resigter_Screen())));
+                      },
                       child: Text(
                         "Đăng ký",
                         style: TextStyle(color: US_APP_WHITE),
