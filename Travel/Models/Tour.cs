@@ -16,30 +16,9 @@ namespace Travel.Models
         public string MoTa { get; set; }
         public string CanChuanBi { get; set; }
         public string DiemNoiBat { get; set; }
-        private DateTime? ngaytao = null;
-        private DateTime? ngaysua = null;
-        public DateTime NgayTao
-        {
-            get
-            {
-                return this.ngaytao.HasValue
-                   ? this.ngaytao.Value
-                   : DateTime.Now;
-            }
-
-            set { this.ngaytao = value; }
-        }
-        public DateTime NgaySua
-        {
-            get
-            {
-                return this.ngaysua.HasValue
-                   ? this.ngaysua.Value
-                   : DateTime.Now;
-            }
-
-            set { this.ngaysua = value; }
-        }
+        public string DiemDi { get; set; }
+        public DateTime NgayTao { get; set; } = DateTime.Now;
+        public DateTime NgaySua { get; set; } = DateTime.Now;
         public DateTime? NgayXoa { get; set; }
         public int TrangThai { get; set; }
 

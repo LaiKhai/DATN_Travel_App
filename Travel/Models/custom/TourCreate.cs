@@ -59,6 +59,7 @@ namespace Travel.Models.custom
         public int CongtyId { get; set; }
         public string TenTour { get; set; }
         public string Mota { get; set; }
+        public string DiemDi { get; set; }
         public List<string> CanChuanBi { get; set; }
         public List<string> DiemNoiBat { get; set; }
     }
