@@ -1,5 +1,8 @@
+import 'package:company_tour_app/ui/common/constant/dimen.dart';
+import 'package:company_tour_app/ui/page/Quan_ly.dart';
 import 'package:company_tour_app/ui/page/tao_tour_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Navi_tab extends StatefulWidget {
   const Navi_tab({Key? key}) : super(key: key);
@@ -13,10 +16,7 @@ class _Navi_tabState extends State<Navi_tab> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
+    Quan_Ly_Tour(),
     Text(
       'Index 1: Business',
       style: optionStyle,
@@ -41,7 +41,24 @@ class _Navi_tabState extends State<Navi_tab> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('BottomNavigationBar Sample'),
+        leading: Icon(
+          Icons.ac_unit_outlined,
+          size: 50,
+        ),
+        centerTitle: true,
+        actions: [
+          CircleAvatar(
+            backgroundColor: Colors.orange,
+          )
+        ],
+        title: Text(
+          'Tên công ty',
+          style: GoogleFonts.quicksand(
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+            fontSize: 30,
+          ),
+        ),
       ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
@@ -51,26 +68,26 @@ class _Navi_tabState extends State<Navi_tab> {
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
-            backgroundColor: Colors.red,
+            backgroundColor: Color(0xFF3192D3),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.business),
             label: 'Business',
-            backgroundColor: Colors.green,
+            backgroundColor: Color(0xFF3192D3),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.school),
             label: 'School',
-            backgroundColor: Colors.purple,
+            backgroundColor: Color(0xFF3192D3),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.settings),
             label: 'Settings',
-            backgroundColor: Colors.pink,
+            backgroundColor: Color(0xFF3192D3),
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
+        selectedItemColor: Colors.yellow,
         onTap: _onItemTapped,
       ),
       floatingActionButton: FloatingActionButton(
