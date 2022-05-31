@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 using Travel.Data;
 using Travel.Models.custom;
 using Travel.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Travel.Controllers
 {
     [Authorize]
-    [Authorize(Roles = "Business")]
     [Route("api/[controller]")]
     [ApiController]
     public class ToursController : Controller
@@ -27,6 +27,7 @@ namespace Travel.Controllers
         }
         [HttpPost]
         [Route("create")]
+        [Authorize(Roles = "Business")]
         [ActionName("createTour")]
         public async Task<IActionResult> createTour([FromBody] TourCreate tourCreate)
         {
@@ -37,6 +38,7 @@ namespace Travel.Controllers
                 tour.CongTyId = tourCreate.rTour.CongtyId;
                 tour.TheLoaiId = tourCreate.rTour.TheLoaiId;
                 tour.TenTour = tourCreate.rTour.TenTour;
+                tour.DiemDi = tourCreate.rTour.DiemDi;
                 tour.CanChuanBi = "";
                 tour.DiemNoiBat = "";
                 tour.TrangThai = 1;
@@ -152,6 +154,43 @@ namespace Travel.Controllers
                 // TODO: Handle failure
                 return BadRequest("Create tour fail");
             }
+
+        }
+        [HttpGet]
+        [ActionName("getTour")]
+        public async Task<IActionResult> getTour()
+        {
+            List<getTours> result = new List<getTours>();
+            List<Tour> tours = _context.Tours.Include(t => t.TheLoai).Include(t=>t.CongTy).Where(t => t.TrangThai == 1).ToList();
+            foreach(var tour in tours)
+            {
+                getTours gt = new getTours();
+                gt.tenTour = tour.TenTour;
+                gt.id = tour.Id;
+                gt.theLoaiId = tour.TheLoaiId;
+                gt.Tenloai = tour.TheLoai.TenLoai;
+                gt.TencongTy = tour.CongTy.Tencongty;
+                gt.congTyId = tour.CongTyId;
+                gt.moTa = tour.MoTa;
+                gt.canChuanBi = tour.CanChuanBi;
+                gt.diemNoiBat = tour.DiemNoiBat;
+                gt.diemDi = tour.DiemDi;
+                gt.ngayTao = tour.NgayTao;
+                var anhtour = _context.AnhTours.FirstOrDefault(p => p.TourId == tour.Id);
+                if (anhtour == null)
+                {
+                    gt.anhTours = "default.jpg";
+                }
+                else
+                {
+                    gt.anhTours = anhtour.Anh;
+                }
+                var gia = _context.ThoiGians.OrderByDescending(p=>p.GiaDefaut).FirstOrDefault(p => p.TourId == tour.Id);
+                gt.Gia = gia.GiaDefaut;
+
+                result.Add(gt);
+            }    
+            return Json(result);
 
         }
 
