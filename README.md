@@ -11,4 +11,4 @@
 ## Tạo Database - chạy lệnh trong package Manager Console
 - `Add-migration int`
 - `update-database`
->>>>>>> 41703cecaec394a7aeb46be1741eb5acf79e4a56
+
